@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+  <a href="/">ERB</a>
+  <br>
+  <a href="/haml">HAML</a>
+  <br>
+  <a href="/slim">Slim</a>
+
+  <h3>ERB</h3>
+
+  <table>
+    <thead>
+      <th>First</th>
+      <th>Last</th>
+      <th>Graduation Year</th>
+    </thead>
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= student.first %></td>
+          <td><%= student.last %></td>
+          <td><%= student.grad_year %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</body>
+</html>

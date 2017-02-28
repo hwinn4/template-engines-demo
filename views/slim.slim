@@ -1,0 +1,26 @@
+html lang="en"
+head
+  meta charset="UTF-8"
+  title Document
+  link rel="stylesheet" type="text/css" href="/stylesheets/style.css"
+
+body
+  a href="/" ERB
+  br
+  a href="/haml" HAML
+  br
+  a href="/slim" Slim
+
+  h3 Slim
+
+  table
+    thead
+      th First
+      th Last
+      th Graduation Year
+    tbody
+      - @students.each do |student|
+        tr
+          td = student.first
+          td = student.last
+          td = student.grad_year
